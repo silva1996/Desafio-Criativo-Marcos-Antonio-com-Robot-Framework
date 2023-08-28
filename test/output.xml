@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230812 19:30:01.144" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="C:\Users\marco\OneDrive\Área de Trabalho\teste\test\login.robot">
+<test id="s1-t1" name="Login com sucesso" line="14">
+<kw name="Abrir Navegador" library="resouces" type="SETUP">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230812 19:30:01.685" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/login'.</msg>
+<status status="PASS" starttime="20230812 19:30:01.684" endtime="20230812 19:30:11.337"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:01.682" endtime="20230812 19:30:11.337"/>
+</kw>
+<kw name="Realizar login" library="resouces">
+<arg>marcos@hotmail.com</arg>
+<arg>123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//form[@action='/login']/input[@name='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:11.356" level="INFO">Typing text 'marcos@hotmail.com' into text field '//form[@action='/login']/input[@name='email']'.</msg>
+<status status="PASS" starttime="20230812 19:30:11.354" endtime="20230812 19:30:11.721"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//form[@action='/login']/input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:11.723" level="INFO">Typing password into text field '//form[@action='/login']/input[@name='password']'.</msg>
+<msg timestamp="20230812 19:30:11.871" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230812 19:30:11.997" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230812 19:30:11.722" endtime="20230812 19:30:11.997"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:11.999" level="INFO">Clicking button '//button[@data-qa='login-button']'.</msg>
+<status status="PASS" starttime="20230812 19:30:11.998" endtime="20230812 19:30:24.321"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:11.353" endtime="20230812 19:30:24.321"/>
+</kw>
+<kw name="Validar Login executado com sucesso" library="resouces">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//a[@href='/logout']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230812 19:30:24.403" level="INFO">Element '//a[@href='/logout']' is displayed.</msg>
+<status status="PASS" starttime="20230812 19:30:24.328" endtime="20230812 19:30:24.403"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:24.327" endtime="20230812 19:30:24.403"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:01.679" endtime="20230812 19:30:24.404"/>
+</test>
+<test id="s1-t2" name="Login sem sucesso: email invalido" line="18">
+<kw name="Abrir Navegador" library="resouces" type="SETUP">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230812 19:30:24.411" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/login'.</msg>
+<status status="PASS" starttime="20230812 19:30:24.409" endtime="20230812 19:30:31.556"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:24.408" endtime="20230812 19:30:31.557"/>
+</kw>
+<kw name="Realizar login" library="resouces">
+<arg>marcos1@hotmail.com</arg>
+<arg>123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//form[@action='/login']/input[@name='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:31.562" level="INFO">Typing text 'marcos1@hotmail.com' into text field '//form[@action='/login']/input[@name='email']'.</msg>
+<status status="PASS" starttime="20230812 19:30:31.561" endtime="20230812 19:30:32.126"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//form[@action='/login']/input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:32.128" level="INFO">Typing password into text field '//form[@action='/login']/input[@name='password']'.</msg>
+<msg timestamp="20230812 19:30:32.870" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230812 19:30:32.988" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230812 19:30:32.127" endtime="20230812 19:30:32.989"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:32.990" level="INFO">Clicking button '//button[@data-qa='login-button']'.</msg>
+<status status="PASS" starttime="20230812 19:30:32.989" endtime="20230812 19:30:37.439"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:31.560" endtime="20230812 19:30:37.439"/>
+</kw>
+<kw name="Validar Login sem sucesso" library="resouces">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${validação_de_email_sem_sucesso}</var>
+<arg>//form[@action='/login']/p</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230812 19:30:37.501" level="INFO">${validação_de_email_sem_sucesso} = &lt;selenium.webdriver.remote.webelement.WebElement (session="49c3f08292909c5e513a0dd6e22769da", element="06AC3C06C3FA99FA3FFFA60D0747226C_element_46")&gt;</msg>
+<status status="PASS" starttime="20230812 19:30:37.451" endtime="20230812 19:30:37.501"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>Your email or password is incorrect!</arg>
+<arg>${validação_de_email_sem_sucesso.text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230812 19:30:37.501" endtime="20230812 19:30:37.549"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:37.450" endtime="20230812 19:30:37.549"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:24.407" endtime="20230812 19:30:37.550"/>
+</test>
+<test id="s1-t3" name="Login sem sucesso: senha invalida" line="22">
+<kw name="Abrir Navegador" library="resouces" type="SETUP">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230812 19:30:37.558" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/login'.</msg>
+<status status="PASS" starttime="20230812 19:30:37.556" endtime="20230812 19:30:45.895"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:37.555" endtime="20230812 19:30:45.895"/>
+</kw>
+<kw name="Realizar login" library="resouces">
+<arg>marcos@hotmail.com</arg>
+<arg>1</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//form[@action='/login']/input[@name='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:45.918" level="INFO">Typing text 'marcos@hotmail.com' into text field '//form[@action='/login']/input[@name='email']'.</msg>
+<status status="PASS" starttime="20230812 19:30:45.917" endtime="20230812 19:30:46.450"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//form[@action='/login']/input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:46.453" level="INFO">Typing password into text field '//form[@action='/login']/input[@name='password']'.</msg>
+<msg timestamp="20230812 19:30:46.541" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230812 19:30:46.651" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230812 19:30:46.451" endtime="20230812 19:30:46.651"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230812 19:30:46.653" level="INFO">Clicking button '//button[@data-qa='login-button']'.</msg>
+<status status="PASS" starttime="20230812 19:30:46.651" endtime="20230812 19:30:56.116"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:45.916" endtime="20230812 19:30:56.116"/>
+</kw>
+<kw name="Validar Login sem sucesso" library="resouces">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${validação_de_email_sem_sucesso}</var>
+<arg>//form[@action='/login']/p</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230812 19:30:56.197" level="INFO">${validação_de_email_sem_sucesso} = &lt;selenium.webdriver.remote.webelement.WebElement (session="df5bb9dad1b5f84c3374d19b84a91f75", element="425EAB2098ED42E66AEA5A4D114FF94B_element_36")&gt;</msg>
+<status status="PASS" starttime="20230812 19:30:56.121" endtime="20230812 19:30:56.197"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>Your email or password is incorrect!</arg>
+<arg>${validação_de_email_sem_sucesso.text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230812 19:30:56.197" endtime="20230812 19:30:56.245"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:56.121" endtime="20230812 19:30:56.245"/>
+</kw>
+<status status="PASS" starttime="20230812 19:30:37.553" endtime="20230812 19:30:56.253"/>
+</test>
+<doc>Automação do site Automation Exercise</doc>
+<status status="PASS" starttime="20230812 19:30:01.150" endtime="20230812 19:30:56.279"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
