@@ -18,9 +18,6 @@ a) Testes Manuais:
 - Elaboraremos casos de teste detalhados para cada cenário identificado.
 - Realizaremos testes manuais de todos os cenários definidos nos casos de teste, seguindo o fluxo de BDD.
 - Registraremos os resultados dos testes, incluindo sucesso, falha e observações.
-Desafio Criativo: Marcos Antonio
-Telefone:81 994573415
-LinkedIn: https://www.linkedin.com/in/marcosan1/
 - Documentaremos quaisquer defeitos encontrados durante os testes.
 - Verificaremos a cobertura dos testes em relação aos cenários planejados.
 b) Testes Automatizados:
@@ -53,9 +50,6 @@ Então recebo uma mensagem de erro informando devo incluir um “@” no endere�
 Dado que eu esteja na página de cadastro
 Quando preencho apenas o campo de e-mail com um e-mail já existente
 Então recebo uma mensagem de erro informando que o e-mail já está cadastrado
-Desafio Criativo: Marcos Antonio
-Telefone:81 994573415
-LinkedIn: https://www.linkedin.com/in/marcosan1/
 Cenários Casos de testes Descrição
 - 002- Login
 -CT 02.01- Login bem-sucedido
